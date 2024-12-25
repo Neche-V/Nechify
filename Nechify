@@ -1,0 +1,83 @@
+# nechify.py
+
+# Dictionary of Web3 terms
+web3_dict = {
+    "Blockchain": "A decentralized digital ledger used to record transactions across many computers.",
+    "Smart Contract": "Self-executing contracts with the terms of the agreement directly written into code.",
+    "Ethereum": "A decentralized blockchain platform that enables smart contracts and decentralized applications (DApps).",
+    "NFT": "Non-Fungible Token, a unique digital asset stored on a blockchain.",
+    "Cryptocurrency": "Digital or virtual currencies secured by cryptography.",
+    "Gas Fee": "The fee required to conduct a transaction or execute a smart contract on a blockchain.",
+    "Wallet": "A digital tool that allows users to store and manage cryptocurrencies.",
+    "Decentralization": "The transfer of control from a central authority to a distributed network.",
+    "DAO": "Decentralized Autonomous Organization, an organization managed by smart contracts and community governance.",
+    "DeFi": "Decentralized Finance, a blockchain-based form of financial services.",
+    "Metaverse": "A virtual reality space where users can interact in a computer-generated environment.",
+    "Staking": "Locking cryptocurrency to support network operations and earn rewards.",
+    "Proof of Work": "A consensus mechanism requiring computational work to validate transactions.",
+    "Proof of Stake": "A consensus mechanism that selects validators based on their cryptocurrency holdings.",
+    "DApp": "Decentralized Application, an app that runs on a blockchain.",
+    "Hash": "A fixed-length string generated from input data.",
+    "Mining": "The process of validating and adding transactions to a blockchain.",
+    "Token": "A digital asset created on a blockchain.",
+    "ICO": "Initial Coin Offering, a fundraising method using cryptocurrencies.",
+    "Layer 2": "Solutions built on top of a blockchain to improve scalability.",
+    "Interoperability": "The ability of different blockchain systems to work together.",
+    "Consensus": "A process to achieve agreement on the blockchain.",
+    "Ledger": "A record-keeping system for transactions.",
+    "Private Key": "A secret code that allows access to cryptocurrency funds.",
+    "Public Key": "A cryptographic code that allows users to receive funds.",
+    "Node": "A computer that participates in a blockchain network.",
+    "Sharding": "A method to partition data to improve scalability.",
+    "Fork": "A split in a blockchain, creating two separate chains.",
+    "Airdrop": "Free distribution of cryptocurrency tokens to users.",
+    "Immutable": "Data that cannot be changed once written.",
+    "Oracle": "A service that connects blockchains to external data.",
+    "Liquidity": "The availability of liquid assets in a market.",
+    "Yield Farming": "Earning rewards by providing liquidity to DeFi platforms.",
+    "Cold Wallet": "An offline storage method for cryptocurrencies.",
+    "Hot Wallet": "An online storage method for cryptocurrencies.",
+    "KYC": "Know Your Customer, a verification process for users.",
+    "ICO": "Initial Coin Offering, a method of raising funds using cryptocurrency.",
+    "Tokenomics": "The economics of cryptocurrency tokens.",
+    "Altcoin": "Any cryptocurrency other than Bitcoin.",
+    "Mainnet": "The main blockchain network where transactions occur.",
+    "Testnet": "A blockchain used for testing purposes.",
+    "DEX": "Decentralized Exchange, a peer-to-peer platform for trading cryptocurrencies.",
+    "Cross-chain": "The ability of different blockchains to work together.",
+    "Satoshi": "The smallest unit of Bitcoin.",
+    "Validator": "A participant in a blockchain network responsible for validating transactions.",
+    "Block": "A collection of data in a blockchain.",
+    "Web3": "The decentralized internet powered by blockchain technology.",
+    "Consensus Mechanism": "A process to agree on the state of the blockchain."
+}
+
+# Function to search for terms
+def search_term(term):
+    return web3_dict.get(term, "Term not found in Nechify.")
+
+# Main menu
+def main():
+    print("Welcome to Nechify - Your Web3 Dictionary")
+    while True:
+        print("\nOptions:")
+        print("1. Search for a term")
+        print("2. View all terms")
+        print("3. Exit")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            term = input("Enter the term you want to search: ").strip()
+            print(f"{term}: {search_term(term)}")
+        elif choice == "2":
+            for term, meaning in web3_dict.items():
+                print(f"{term}: {meaning}")
+        elif choice == "3":
+            print("Thank you for using Nechify!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
